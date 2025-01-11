@@ -16,7 +16,10 @@
 
   margin: 0 auto;
 }
-
+.storyboard-container {
+  display: flex;
+  flex-direction: column;
+}
 .feeds {
   height: 400px;
   width: 400px;
@@ -140,12 +143,6 @@
 
 /*Storyboard section */
 
-
-.storyboard-container{
-  display: flex;
-  flex-direction: row;
-  
-}
 .story_board {
   display: flex;
   overflow-x: scroll;
@@ -159,13 +156,12 @@
   margin: 25px 0 25px 0;
   box-sizing: border-box;
   box-shadow: 0 0 2px grey;
- 
 }
 .story_board::-webkit-scrollbar {
   display: none;
 }
 
-.scroll-arrow{
+.scroll-arrow {
   position: sticky;
   width: 50px;
   height: 50px;
@@ -173,49 +169,54 @@
   top: 30px;
   z-index: 10;
   /* background-color: rgb(172, 172, 240); */
-
 }
 
- .profile-item{
+.profile-item {
   display: flex;
   flex-direction: row;
-  margin:5px 0  0 8px ;
+  margin: 5px 0 0 8px;
   justify-content: center;
   padding: 7px 0 0 2px;
-  gap: 5px ;
- }
- 
- .gradient-border{
-  width:  65.21px;
+  gap: 5px;
+}
+
+.gradient-border {
+  width: 65.21px;
   height: 65.21px;
   border: 2px solid transparent;
-  background: 
-  linear-gradient(white, white) padding-box,
-  linear-gradient(90deg, rgb(252, 196, 12), rgb(245, 45, 150), rgb(234, 72, 244), rgb(131, 1, 250)) border-box ;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(
+        90deg,
+        rgb(252, 196, 12),
+        rgb(245, 45, 150),
+        rgb(234, 72, 244),
+        rgb(131, 1, 250)
+      )
+      border-box;
   border-radius: 50%;
- }
+}
 
- .profile{
+.profile {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
- }
- 
- .profile-image{
+}
+
+.profile-image {
   width: 59.73px;
   height: 59.73px;
   padding: 2.5px;
   border-radius: 50%;
- }
+}
 
- .profile-name{
-  font-weight:400px;
+.profile-name {
+  font-weight: 400px;
   font-size: 12px;
   text-align: center;
- }
- 
- .nav-bar {
+}
+
+.nav-bar {
   height: 64px;
   border: 1px solid #dbdbdb;
   background-color: #ffffff;

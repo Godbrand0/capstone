@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+TASKS AND PROCEEDINGS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Task 1: Storyboard Component
+Assigned to:Chikanma
+-Description:Developed the storyboard component.
+-Proceedings:Utilized the API to retrieve follower data for Mr. Beast, ensuring accurate and up-to-date information is displayed within the storyboard section.
 
-## Available Scripts
+Task 2: post Feeds
+Assigned to: Thompson 
+Description:Developed the post feed component.
+Proceedings:Implemented custom hook to fetch and display the latest post updates. Ensured the news feed is dynamically updated and integrated seamlessly with the user interface.
 
-In the project directory, you can run:
+Task 3: Dark Mode Implementation
+Assigned to: Da-Silva
+Description: Developed and implemented a responsive dark mode feature.
+Proceedings:
+  - Designed and integrated a night mode to enhance user experience during low-light usage.
+  - Implemented dynamic theme switching for seamless transitions between light and dark modes.
 
-### `npm start`
+Task 4: Navbar component
+Assigned to:  zainab
+Description:** Customized UI icons for dark mode.
+-Proceedings:
+  - Ensured proper visibility and alignment of all navbar icons in both light and dark modes by adjusting display properties, and z-index to prevent overlapping issues.
+-Maintained a consistent and modern visual design across different themes and screen sizes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ Task 5: mobile responsive display.
+- Assigned to: Emmanuel
+- Description: implemented a fully responsive webpage to ensure seamless user experience on mobile.
+- Proceedings:
+  - Ensured all components, including images, text, and icons, scale proportionally without breaking the layout or affecting usability.
+-Isolated profile picture styles to maintain display integrity and ensure consistent appearance, regardless of dark mode or screen size changes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ Task 6: Follow Section
+- Assigned to: Justus 
+-Description:Developed the Follow section of the project.
+- Proceedings:
+  - Utilized the API to fetch information about Mediamodifier, including Username and Full Name.
+  - Created mock data for suggested users to follow, as it was not available in the API.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ Task 7: Follow-up and README Creation
+Assigned to: Christie
+Description: Coordinated team contributions and created the README documentation.
+Proceedings:Collected and reviewed responses from all team members regarding their tasks and contributions.
+Structured and optimized the README to include detailed information about each component of the project, ensuring clarity and completeness.

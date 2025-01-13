@@ -1,3 +1,4 @@
+/* Global Reset and Default Styles */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +14,6 @@
   align-items: center;
   gap: 30px;
   width: 400px;
-
   margin: 0 auto;
 }
 .storyboard-container {
@@ -141,8 +141,7 @@
   text-transform: uppercase;
 }
 
-/*Storyboard section */
-
+/* Storyboard section */
 .story_board {
   display: flex;
   overflow-x: scroll;
@@ -168,7 +167,6 @@
   right: 10px;
   top: 30px;
   z-index: 10;
-  /* background-color: rgb(172, 172, 240); */
 }
 
 .profile-item {
@@ -233,7 +231,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   margin: 10px auto;
 }
 .nav_input {
@@ -254,7 +251,7 @@
   color: #999595;
 }
 
-/*================Follow Section Styles====================*/
+/* Follow Section Styles */
 .profile-section {
   font-family: Arial, sans-serif;
   max-width: 350px;
@@ -348,6 +345,90 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  object-fit: cover; /* Ensures the image fits within the circle */
+  object-fit: cover;
 }
-/*======================================================*/
+
+/* Media Queries for Responsive Layout */
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .App {
+    width: 100%;
+  }
+
+  .body {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .storyboard-container,
+  .feeds {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .feed_board {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .feed_header {
+    padding: 10px;
+  }
+
+  .media {
+    height: 300px;
+  }
+
+  .feed_icons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input input {
+    width: 100%;
+  }
+
+  .story_board {
+    width: 100%;
+    height: 100px;
+  }
+
+  .nav {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .nav_input {
+    width: 100%;
+  }
+
+  .suggestions .suggestion-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Small Mobile (portrait) devices */
+@media (max-width: 480px) {
+  .App {
+    width: 100%;
+  }
+
+  .feed_header {
+    padding: 5px;
+  }
+
+  .media {
+    height: 250px;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .footer {
+    font-size: 10px;
+  }
+}
+

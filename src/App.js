@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+
       <div className="body">
         <div className="storyboard-container">
           <StorySection />

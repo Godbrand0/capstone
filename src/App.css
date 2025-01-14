@@ -351,11 +351,12 @@
 }
 
 .header {
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 5px;
   align-items: center;
   padding: 5px 0;
   display: none;
+  gap: 20px;
 }
 .header_right {
   display: flex;
@@ -368,7 +369,7 @@
   bottom: 0;
   left: 0;
   height: 70px;
-  width: 100%;
+  width: 90%;
   display: none;
   border-radius: 10px 10px 0px 0;
   background-color: #efefef;
@@ -412,5 +413,8 @@
   }
   .body {
     margin-left: -10px;
+  }
+  .loading {
+    display: none;
   }
 }

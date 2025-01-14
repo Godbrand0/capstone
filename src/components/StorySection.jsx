@@ -10,23 +10,25 @@ export default function StorySection() {
   const fetchFollowers = async (username) => {
     const options = {
       method: "GET",
-      url: "https://instagram-scraper-api2.p.rapidapi.com/v1/followers?username_or_id_or_url=+mediamodifier+",
-      params: { username_or_id_or_url: username, url_embed_safe: 'true' },
+      url: "https://instagram-scraper-api2.p.rapidapi.com/v1/followers",
+      params: {
+        username_or_id_or_url: username,
+      },
       headers: {
-        "x-rapidapi-key": "bd3b4e5479msha3f9b27b32d0366p1c3791jsn80f9344b0689",
+        "x-rapidapi-key": "64728cf656msh1775344a295e74dp1dd74ajsne3557ca01283",
         "x-rapidapi-host": "instagram-scraper-api2.p.rapidapi.com",
       },
     };
 
     try {
       const response = await axios.request(options);
-      
-      
+
       const followers = response.data?.data?.items || []; // Adjust based on API response structure
       console.log(followers);
-      return followers.map((follower) => ({id : follower.id,
-        image : follower.img,
-        username : follower.username
+      return followers.map((follower) => ({
+        id: follower.id,
+        image: follower.img,
+        username: follower.username,
       })); // Extract IDs
     } catch (err) {
       setError(err.message || "Failed to fetch followers");
@@ -39,9 +41,10 @@ export default function StorySection() {
       const options = {
         method: "GET",
         url: `https://instagram-scraper-api2.p.rapidapi.com/v1/followers?username_or_id_or_url=+mediamodifier+`,
-        params: { username_or_id_or_url: user.id},
+        params: { username_or_id_or_url: user.id },
         headers: {
-          "x-rapidapi-key": "bd3b4e5479msha3f9b27b32d0366p1c3791jsn80f9344b0689",
+          "x-rapidapi-key":
+            "64728cf656msh1775344a295e74dp1dd74ajsne3557ca01283",
           "x-rapidapi-host": "instagram-scraper-api2.p.rapidapi.com",
         },
       };
@@ -49,8 +52,11 @@ export default function StorySection() {
       try {
         const response = await axios.request(options);
         console.log(response);
-        
-        return {...user, stories:response.data?.data.items ? response.data?.data.items : []}; // Adjust based on API response structure
+
+        return {
+          ...user,
+          stories: response.data?.data.items ? response.data?.data.items : [],
+        }; // Adjust based on API response structure
       } catch (err) {
         console.error(`Failed to fetch stories for ID: ${user}`, err);
         return [];
@@ -69,12 +75,11 @@ export default function StorySection() {
 
     try {
       const followerIds = await fetchFollowers(username);
-    
-      
+
       if (followerIds.length === 0) {
         throw new Error("No followers found");
       }
-  	  
+
       const stories = await fetchStoriesByIds(followerIds);
       setProfileItems(stories);
     } catch (err) {
@@ -90,13 +95,16 @@ export default function StorySection() {
   }, []);
 
   function ImageScroll() {
-    return <img className="scroll-arrow" src={ScrollArrow} alt="Scroll arrow" />;
+    return (
+      <img className="scroll-arrow" src={ScrollArrow} alt="Scroll arrow" />
+    );
   }
 
   function Profile() {
     if (loading) return <p>Loading profiles...</p>;
     if (error) return <p>Error: {error}</p>;
-    if (profileItems.length === 0) return <p>No profiles available for this user.</p>;
+    if (profileItems.length === 0)
+      return <p>No profiles available for this user.</p>;
 
     return profileItems.map((profileItem, index) => (
       <div className="profile-item" key={index}>

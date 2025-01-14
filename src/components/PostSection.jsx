@@ -31,11 +31,11 @@ export default function Posts({ darkMode }) {
       method: "GET",
       url: "https://instagram-scraper-api2.p.rapidapi.com/v1.2/posts",
       params: {
-        username_or_id_or_url: "mediamodifier",
+        username_or_id_or_url: "mrbeast",
         url_embed_safe: "true",
       },
       headers: {
-        "x-rapidapi-key": "64728cf656msh1775344a295e74dp1dd74ajsne3557ca01283",
+        "x-rapidapi-key": "d69dcb98e0msh1f3c5c95ebbc67ep146c90jsn3e9bf6fdffd3",
         "x-rapidapi-host": "instagram-scraper-api2.p.rapidapi.com",
       },
     }),
@@ -77,8 +77,14 @@ export default function Posts({ darkMode }) {
           <div className="feed_icons">
             <div className="feed_icons_left">
               <img src={isDarkMode ? LikeDark : Like} alt="Like Icon" />
-              <img src={isDarkMode ? CommentDark : Comment} alt="Comment Icon" />
-              <img src={isDarkMode ? BookmarkDark : Bookmark} alt="Bookmark Icon" />
+              <img
+                src={isDarkMode ? CommentDark : Comment}
+                alt="Comment Icon"
+              />
+              <img
+                src={isDarkMode ? BookmarkDark : Bookmark}
+                alt="Bookmark Icon"
+              />
             </div>
             <img src={isDarkMode ? ShareDark : Share} alt="Share Icon" />
           </div>
@@ -88,9 +94,7 @@ export default function Posts({ darkMode }) {
               Liked by <span>{post.like_count} others</span>
             </p>
             <p className="caption">{post.caption?.text}</p>
-            <p className="comments">
-              View all {post.comment_count} comments
-            </p>
+            <p className="comments">View all {post.comment_count} comments</p>
             <p className="time">
               {new Date(post.taken_at * 1000).toLocaleString()}
             </p>

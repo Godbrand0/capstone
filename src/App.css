@@ -254,7 +254,6 @@
   color: #999595;
 }
 
-
 .profile-section {
   font-family: Arial, sans-serif;
   max-width: 350px;
@@ -418,24 +417,17 @@
   .loading {
     display: none;
   }
-}
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-}
-.App {
-  margin: 0 auto;
-  width: 1400px;
-  height: 100vh;
-}
-.body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  width: 400px;
-  margin: 0 auto;
+  .dark-mode-toggle {
+    position: absolute;
+    top: 0px;
+    height: 20px;
+    left: 230px;
+    border-radius: 5px;
+    width: 10px;
+
+    cursor: pointer;
+    font-size: 9px;
+  }
 }
 
 /* Dark Mode Styles */
@@ -490,7 +482,6 @@ body.dark-mode .suggestions .follow-button {
   background-color: #888;
 }
 
-/* Responsive and Component Styling - No Change */
 .storyboard-container {
   display: flex;
   flex-direction: column;
@@ -499,42 +490,7 @@ body.dark-mode .suggestions .follow-button {
   height: 400px;
   width: 400px;
 }
-/* ... Rest of your styles remain unchanged ... */
 
-@media (max-width: 768px) {
-  .App {
-    width: 100vw;
-    padding: 10px;
-  }
-  .nav-bar {
-    display: none;
-  }
-  .profile-section {
-    display: none;
-  }
-  .footer {
-    display: block;
-  }
-  .feeds {
-    width: 100vw;
-  }
-  .header {
-    display: flex;
-  }
-  .story_board {
-    width: 330px;
-  }
-  .story_left img {
-    top: 84px;
-  }
-  .feeds {
-    width: 320px;
-    margin-top: 70px;
-  }
-  .body {
-    margin-left: -10px;
-  }
-}
 /* Light Mode Styles (Default) */
 :root {
   --background-color: #ffffff;

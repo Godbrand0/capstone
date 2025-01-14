@@ -22,13 +22,11 @@ function App() {
 
   return (
     <div className="App">
-
-
       <Nav />
 
       <NavBar darkMode={darkMode} />
       <button className="dark-mode-toggle" onClick={handleToggleDarkMode}>
-        {darkMode ? "Light Mode" : "Dark Mode"}
+        {darkMode ? "L" : "D"}
       </button>
 
       <div className="body">

@@ -15,7 +15,7 @@ export default function StorySection() {
         username_or_id_or_url: username,
       },
       headers: {
-        "x-rapidapi-key": "64728cf656msh1775344a295e74dp1dd74ajsne3557ca01283",
+        "x-rapidapi-key": "d69dcb98e0msh1f3c5c95ebbc67ep146c90jsn3e9bf6fdffd3",
         "x-rapidapi-host": "instagram-scraper-api2.p.rapidapi.com",
       },
     };
@@ -44,7 +44,7 @@ export default function StorySection() {
         params: { username_or_id_or_url: user.id },
         headers: {
           "x-rapidapi-key":
-            "64728cf656msh1775344a295e74dp1dd74ajsne3557ca01283",
+            "d69dcb98e0msh1f3c5c95ebbc67ep146c90jsn3e9bf6fdffd3",
           "x-rapidapi-host": "instagram-scraper-api2.p.rapidapi.com",
         },
       };
@@ -91,7 +91,7 @@ export default function StorySection() {
 
   // Fetch stories for "mediamodifier" followers on component mount
   useEffect(() => {
-    fetchProfileAndStories("mediamodifier");
+    fetchProfileAndStories("mrbeast");
   }, []);
 
   function ImageScroll() {

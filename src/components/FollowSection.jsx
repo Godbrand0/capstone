@@ -2,16 +2,15 @@ import React, { useEffect, useState } from "react";
 import "../index.css";
 import "../App.css";
 
-// Importing images for mock data
 import image from "../assets/Capstone images/lucas.png";
 import image1 from "../assets/Capstone images/laura.png";
 import image2 from "../assets/Capstone images/rikki.png";
 import image3 from "../assets/Capstone images/elrani.png";
 import image4 from "../assets/Capstone images/tomaska.png";
 
-import fallback from "../assets/Capstone images/profile.png"
+import fallback from "../assets/Capstone images/profile.png";
 
-export default function FollowSection({ username = "mediamodifier" }) {
+export default function FollowSection({ username = "mediamodifier", darkMode }) {
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -29,19 +28,13 @@ export default function FollowSection({ username = "mediamodifier" }) {
       };
 
       try {
-        console.log("Fetching data...");
         const response = await fetch(url, options);
-        console.log("Response status:", response.status);
-
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
-        console.log("API Response:", data); // Debugging
         setUserData(data.data);
-
-        // Set suggestions only if the API call succeeds
         setSuggestions([
           { username: "lucas", followers: "mark + 2 more", avatar: image },
           { username: "laura", followers: "brandon + 6 more", avatar: image1 },
@@ -50,7 +43,6 @@ export default function FollowSection({ username = "mediamodifier" }) {
           { username: "tomaska", followers: "katarinasterling + 2 more", avatar: image4 },
         ]);
       } catch (error) {
-        console.error("Error fetching data:", error.message);
         setError(error.message);
       } finally {
         setLoading(false);
@@ -65,11 +57,10 @@ export default function FollowSection({ username = "mediamodifier" }) {
   if (!userData) return <div>No user data available.</div>;
 
   return (
-    <div className="profile-section">
-      {/* User Profile Section */}
+    <div className={`profile-section ${darkMode ? "dark-mode-text" : ""}`}>
       <div className="user-profile">
         <img 
-          src={userData.profile_pic_url_hd || fallback} // Fallback image
+          src={userData.profile_pic_url_hd || fallback} 
           alt={`${username}'s profile`} 
           className="avatar" 
         />
@@ -80,7 +71,6 @@ export default function FollowSection({ username = "mediamodifier" }) {
         <a href="#" className="switch">Switch</a>
       </div>
 
-      {/* Suggestions Section */}
       <div className="suggestions">
         <div>
           <p className="header">Suggestions For You<span><a href="#" className="see-all">See All</a></span></p>
@@ -88,11 +78,7 @@ export default function FollowSection({ username = "mediamodifier" }) {
         <ul>
           {suggestions.map((suggestion, index) => (
             <li key={index} className="suggestion-item">
-              <img
-                src={suggestion.avatar}
-                alt={suggestion.username}
-                className="avatar"
-              />
+              <img src={suggestion.avatar} alt={suggestion.username} className="avatar" />
               <div>
                 <p className="username">{suggestion.username}</p>
                 <p className="followers">Followed by {suggestion.followers}</p>
@@ -103,7 +89,6 @@ export default function FollowSection({ username = "mediamodifier" }) {
         </ul>
       </div>
 
-      {/* Footer Section */}
       <footer className="footer">
         <p>About • Press • API • Jobs • Privacy • Terms • Locations</p>
         <p>Top Accounts • Hashtags • Language</p>

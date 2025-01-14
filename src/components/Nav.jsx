@@ -5,16 +5,14 @@ import Heart from "../assets/Vector (2).png";
 import Message from "../assets/Menu-Button-Item (2).png";
 import "../App.css";
 
-
-
 export default function Nav() {
   return (
     <div className="header">
-      <img src={Logo} alt="Logo" />
+      <img className="nav-icon" src={Logo} alt="Logo" />
       <div className="header_right">
-        <img src={Menu} alt="Menu" />
-        <img src={Heart} alt="Heart" />
-        <img src={Message} alt="Message" />
+        <img className="nav-icon" src={Menu} alt="Menu" />
+        <img className="nav-icon" src={Heart} alt="Heart" />
+        <img className="nav-icon" src={Message} alt="Message" />
       </div>
     </div>
   );

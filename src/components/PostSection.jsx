@@ -65,7 +65,7 @@ export default function Posts({ darkMode }) {
 
           <div className="feed_image">
             {post.is_video ? (
-              <video controls autoPlay className="media">
+              <video controls className="media">
                 <source src={post.video_url} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
